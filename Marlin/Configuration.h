@@ -712,9 +712,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
     // Tuned by the author. Tune your machine with M303.
-    #define DEFAULT_Kp  22.4
-    #define DEFAULT_Ki   2.12
-    #define DEFAULT_Kd  59.2
+    #define DEFAULT_Kp  26.28
+    #define DEFAULT_Ki   2.71
+    #define DEFAULT_Kd  63.59
   #endif
 #endif
 
@@ -800,9 +800,9 @@
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
 
   // Tuned by the author. Tune your machine with M303.
-  #define DEFAULT_bedKp 68.9
-  #define DEFAULT_bedKi 12.86
-  #define DEFAULT_bedKd 246.3
+  #define DEFAULT_bedKp 98.9
+  #define DEFAULT_bedKi 19.33
+  #define DEFAULT_bedKd 337.7
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -1697,9 +1697,9 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE   10 // Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_DEPLOY_PROBE   3 // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  3 // Z Clearance between probe points
-#define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
+#define Z_CLEARANCE_MULTI_PROBE     3 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
 
 #define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
@@ -2118,7 +2118,7 @@
 
     // Beyond the probed grid, continue the implied tilt?
     // Default is to maintain the height of the nearest edge.
-    //#define EXTRAPOLATE_BEYOND_GRID
+    #define EXTRAPOLATE_BEYOND_GRID
 
     //
     // Subdivision of the grid by Catmull-Rom method.
